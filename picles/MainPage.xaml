@@ -5,11 +5,53 @@
              Shell.NavBarIsVisible="false">
     
     <Grid>
-    <Frame x:Name="Fundo"
-           BackgroundColor="#155e66"/>
+       <Grid.RowDefinitions>
+          <RowDefinition Height="180"/>
+          <RowDefinition Height="25"/>
+          <RowDefinition Height="150"/>
+          <RowDefinition Height="25"/>
+          <RowDefinition Height="150"/>
+          <RowDefinition Height="180"/>
+       </Grid.RowDefinitions>
 
-    <Frame x:Name="Clima"
-           BackgroundColor="White"
-           Margin="50,50,50,500"/>           
-    </Grid>
+       <Grid.ColumnDefinitions>
+           <ColumnDefinition Width="*"/>
+           <ColumnDefinition Width="30"/>
+           <ColumnDefinition Width="*"/>
+       </Grid.ColumnDefinitions>   
+
+       <Frame BackgroundColor="#614085"   
+           Grid.RowSpan="6"
+           Grid.ColumnSpan="3"/>        
+
+    <Frame BackgroundColor="#a497e8"
+           Margin="10,0"   
+           Grid.Row="0"
+           Grid.ColumnSpan="3"/>
+
+    <Frame BackgroundColor="#a497e8"
+           Margin="10,0"     
+           Grid.Row="2"
+           Grid.Column="0"/>
+
+    <Frame BackgroundColor="#a497e8"
+           Margin="10,0"           
+           Grid.Row="4"
+           Grid.Column="0"/>
+
+    <Frame BackgroundColor="#a497e8"
+           Margin="10,0"     
+           Grid.Row="2"
+           Grid.Column="2"/>
+
+     <Frame BackgroundColor="#a497e8"
+            Margin="10,0"  
+           Grid.Row="4"
+           Grid.Column="2"/>
+
+      <Frame BackgroundColor="#a497e8"
+           Margin="10,10,10,0"   
+           Grid.Row="5"
+           Grid.ColumnSpan="3"/>        
+      </Grid>                                       
 </ContentPage>

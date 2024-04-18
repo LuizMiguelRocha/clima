@@ -1,6 +1,6 @@
 namespace picles;
 
-public partial class resurce : ContentPage
+public partial class Results : ContentPage
 {
     public class recursos
     {
@@ -15,5 +15,6 @@ public partial class resurce : ContentPage
         public int sunrise {get;set;}
         public int sunset {get;set;}
         public string city_name {get;set;}
+        public int rain {get;set;}
     }
 }
