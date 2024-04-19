@@ -1,9 +1,8 @@
 namespace picles;
 
-public partial class Results : ContentPage
+public class Results 
 {
-    public class recursos
-    {
+   
         public int temp {get;set;}
         public string deception {get;set;}
         public int date {get;set;}    
@@ -16,5 +15,5 @@ public partial class Results : ContentPage
         public int sunset {get;set;}
         public string city_name {get;set;}
         public int rain {get;set;}
-    }
+
 }

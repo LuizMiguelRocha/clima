@@ -13,15 +13,15 @@ public partial class MainPage : ContentPage
 		PrencerTela();
 	}
 
-	void TestaLayout();
+	void TestaLayout()
 	{
 		resultado = new Results();
-		resultado.temp = 9849841;
+		resultado.sunset = 20;
 	}
 
-	voi PrencerTela();
+	void PrencerTela()
 	{
-		
+		LabelClima.Text = resultado.sunset.ToString();
 	}
 }
 

@@ -6,10 +6,10 @@
     
     <Grid>
        <Grid.RowDefinitions>
-          <RowDefinition Height="180"/>
-          <RowDefinition Height="25"/>
+          <RowDefinition Height="200"/>
+          <RowDefinition Height="10"/>
           <RowDefinition Height="150"/>
-          <RowDefinition Height="25"/>
+          <RowDefinition Height="10"/>
           <RowDefinition Height="150"/>
           <RowDefinition Height="180"/>
        </Grid.RowDefinitions>
@@ -21,13 +21,49 @@
        </Grid.ColumnDefinitions>   
 
        <Frame BackgroundColor="#614085"   
-           Grid.RowSpan="6"
-           Grid.ColumnSpan="3"/>        
-
+              Grid.RowSpan="6"
+              Grid.ColumnSpan="3"/>   
+     
     <Frame BackgroundColor="#a497e8"
            Margin="10,0"   
            Grid.Row="0"
-           Grid.ColumnSpan="3"/>
+           Grid.ColumnSpan="3">
+
+       <Grid>       
+
+       <Grid.ColumnDefinitions>
+           <ColumnDefinition Width="150"/>
+           <ColumnDefinition Width="*"/>
+           <ColumnDefinition Width="*"/>
+       </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+       </Grid.RowDefinitions>
+
+
+       <Label Text="Clima"
+              Grid.Column="0"
+              FontSize="40"/>
+
+       <Label x:Name="LabelClima"
+              Text=""
+              Grid.Column="1"
+              FontSize="40"/>
+
+       <Label Text="Tempo"
+              Grid.Column="0"
+              Grid.Row="1"
+              FontSize="30"/>
+
+       <Label x:Name="LabelTempo"
+              Text=""
+              Grid.Column="1"
+              Grid.Row="1"/>       
+       </Grid>       
+     </Frame>            
 
     <Frame BackgroundColor="#a497e8"
            Margin="10,0"     
