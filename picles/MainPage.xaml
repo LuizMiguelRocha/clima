@@ -61,19 +61,71 @@
        <Label x:Name="LabelTempo"
               Text=""
               Grid.Column="1"
-              Grid.Row="1"/>       
+              Grid.Row="1"/>
+
+       <Label Text="Apucarana, PR"
+              Grid.Column="0"
+              Grid.Row="2"
+              FontSize="20"/>              
        </Grid>       
      </Frame>            
 
     <Frame BackgroundColor="#a497e8"
            Margin="10,0"     
            Grid.Row="2"
-           Grid.Column="0"/>
+           Grid.Column="0">
+
+       <Grid>
+
+       <Grid.ColumnDefinitions>
+           <ColumnDefinition Width="150"/>
+           <ColumnDefinition Width="*"/>
+       </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+          <RowDefinition Height="50"/>
+          <RowDefinition Height="50"/>
+       </Grid.RowDefinitions> 
+
+       <Label Text="Chuva:"
+              Grid.Column="0"
+              Grid.Row="0"/>
+
+       <Label x:Name="LabelChuva"
+              Text=""
+              Grid.Column="1"
+              Grid.Row="0"/>
+
+       <Label Text="Humidade"
+              Grid.Column="0"
+              Grid.Row="1"/>
+
+       <Label x:Name="LabelHumidade"
+              Text=""
+              Grid.Column="1"
+              Grid.Row="1"/>                      
+       </Grid>         
+    </Frame>       
 
     <Frame BackgroundColor="#a497e8"
            Margin="10,0"           
            Grid.Row="4"
-           Grid.Column="0"/>
+           Grid.Column="0">
+       <Grid>
+
+       <Grid.ColumnDefinitions>
+           <ColumnDefinition Width="150"/>
+           <ColumnDefinition Width="*"/>
+       </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+          <RowDefinition Height="50"/>
+          <RowDefinition Height="50"/>
+       </Grid.RowDefinitions>
+
+       
+       </Grid> 
+    </Frame>       
 
     <Frame BackgroundColor="#a497e8"
            Margin="10,0"     
