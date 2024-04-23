@@ -96,7 +96,7 @@
               Grid.Column="1"
               Grid.Row="0"/>
 
-       <Label Text="Humidade"
+       <Label Text="Humidade:"
               Grid.Column="0"
               Grid.Row="1"/>
 
@@ -119,23 +119,107 @@
        </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-          <RowDefinition Height="50"/>
-          <RowDefinition Height="50"/>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
        </Grid.RowDefinitions>
 
-       
+       <Label Text="Sol"
+              Grid.Row="0"
+              Grid.ColumnSpan="2"
+              FontSize="20"/>
+
+       <Label Text="Amanhecer:"
+              Grid.Row="1"
+              Grid.Column="0"/>
+
+       <Label x:Name="LabelAmanhecer"
+              Text=""
+              Grid.Column="1"
+              Grid.Row="1"/>
+
+       <Label Text="Anoitecer:"
+              Grid.Column="0"
+              Grid.Row="2"/>
+
+       <Label x:Name="LabelAnoitecer"
+              Grid.Column="1"
+              Grid.Row="2"/>                           
+
        </Grid> 
     </Frame>       
 
     <Frame BackgroundColor="#a497e8"
            Margin="10,0"     
            Grid.Row="2"
-           Grid.Column="2"/>
+           Grid.Column="2">
+       <Grid>
+
+       <Grid.ColumnDefinitions>
+           <ColumnDefinition Width="150"/>
+           <ColumnDefinition Width="*"/>
+       </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+       </Grid.RowDefinitions>
+
+       <Label Text="Vento"
+              Grid.Row="0"
+              FontSize="20"/>
+
+       <Label Text="Força:"
+              Grid.Row="1"
+              Grid.Column="0"/>
+
+       <Label x:Name="LabelForça"
+              Text=""
+              Grid.Row="1"
+              Grid.Column="1"/>
+
+       <Label Text="Direção:"
+              Grid.Row="2"
+              Grid.Column="0"/>
+
+       <Label x:Name="LabelDirecao"
+              Text=""
+              Grid.Row="2"
+              Grid.Column="1"/>                          
+
+       </Grid>
+    </Frame>       
 
      <Frame BackgroundColor="#a497e8"
             Margin="10,0"  
            Grid.Row="4"
-           Grid.Column="2"/>
+           Grid.Column="2">
+        <Grid>
+          <Grid.ColumnDefinitions>
+           <ColumnDefinition Width="150"/>
+           <ColumnDefinition Width="*"/>
+       </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+       </Grid.RowDefinitions>
+
+       <Label Text="Lua"
+              Grid.Row="0"
+              FontSize="20"/>
+
+       <Label Text="Fase:"
+              Grid.Row="1"
+              Grid.Column="0"/>
+
+       <Label x:Name="LabelFase"
+              Text=""
+              Grid.Row="1"
+              Grid.Column="1"/>             
+        </Grid>   
+     </Frame>      
 
       <Frame BackgroundColor="#a497e8"
            Margin="10,10,10,0"   
