@@ -1,44 +1,43 @@
-﻿namespace picles;
+﻿using System.Text.Json;
 
-	const string Url="https://api.hgbrasil.com/weather/woeid=455927&key=7960dae6";
+namespace picles;
+
 
 public partial class MainPage : ContentPage
 {
 	int count = 0;
 
-	Results resultado;
+	Resposta resposta;
+	const string Url="https://api.hgbrasil.com/weather?woeid=455927&key=7960dae6";
 
 	public MainPage()
 	{
 		InitializeComponent();
-		TestaLayout();
 		PrencerTela();
-	}
-
-	void TestaLayout()
-	{
-		resultado = new Results();
-		resultado.sunset = 20;
 	}
 
 	void PrencerTela()
 	{
-		LabelClima.Text = resultado.sunset.ToString();
+		LabelClima.Text = resposta.results.sunset.ToString();
 	}
 
 
         async void AtualizaTempo()
         {
-            tey
+            try
             {
-                var HttpClient = new HttpClient();
-                var Respomse = await HttpClient.GetAsync(Url);
-                if(Respomse.IsSuccesStatusCode)
+                var httpClient = new HttpClient();
+                var response = await httpClient.GetAsync(Url);
+                if(response.IsSuccessStatusCode)
                 {
-                    String content = Respomse.Content.ReadAsStringAsync();
-                    resultado = JsonSerialience.Deserialire<Results>(content);
+                    var content = await response.Content.ReadAsStringAsync();
+                    resposta = JsonSerializer.Deserialize<Resposta>(content);
                 }
             }
+			catch(Exception e)
+			{
+				//Erro
+			}
         }
     
 
