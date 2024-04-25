@@ -13,12 +13,15 @@ public partial class MainPage : ContentPage
 	public MainPage()
 	{
 		InitializeComponent();
-		PrencerTela();
 	}
 
-	void PrencerTela()
+	void PrencHerTela()
 	{
 		LabelClima.Text = resposta.results.sunset.ToString();
+		LabelTempo.Text = resposta.results.temp.ToString();
+		LabelChuva.Text = resposta.results.rain.ToString();
+		LabelAmanhecer.Text = resposta.results.sunrise.ToString();
+
 	}
 
 
@@ -33,6 +36,7 @@ public partial class MainPage : ContentPage
                     var content = await response.Content.ReadAsStringAsync();
                     resposta = JsonSerializer.Deserialize<Resposta>(content);
                 }
+			PrencHerTela();
             }
 			catch(Exception e)
 			{

@@ -83,27 +83,18 @@
        </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-          <RowDefinition Height="50"/>
-          <RowDefinition Height="50"/>
+          <RowDefinition Height="110"/>
        </Grid.RowDefinitions> 
 
        <Label Text="Chuva:"
               Grid.Column="0"
-              Grid.Row="0"/>
+              Grid.Row="0"
+              FontSize="45"/>
 
        <Label x:Name="LabelChuva"
               Text=""
               Grid.Column="1"
-              Grid.Row="0"/>
-
-       <Label Text="Humidade:"
-              Grid.Column="0"
-              Grid.Row="1"/>
-
-       <Label x:Name="LabelHumidade"
-              Text=""
-              Grid.Column="1"
-              Grid.Row="1"/>                      
+              Grid.Row="0"/>                    
        </Grid>         
     </Frame>       
 
