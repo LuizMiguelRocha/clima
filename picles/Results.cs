@@ -15,5 +15,8 @@ public class Results
         public int sunset {get;set;}
         public string city_name {get;set;}
         public int rain {get;set;}
+        public int moon_phase {get;set;}
+        public int climate {get;set;}
+        public int strength {get;set;}
 
 }

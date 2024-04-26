@@ -20,6 +20,8 @@
            <ColumnDefinition Width="*"/>
        </Grid.ColumnDefinitions>   
 
+       <Image x:Name="imagemfundo"/>
+
        <Frame BackgroundColor="#614085"   
               Grid.RowSpan="6"
               Grid.ColumnSpan="3"/>   
@@ -77,24 +79,19 @@
 
        <Grid>
 
-       <Grid.ColumnDefinitions>
-           <ColumnDefinition Width="150"/>
-           <ColumnDefinition Width="*"/>
-       </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-          <RowDefinition Height="110"/>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
        </Grid.RowDefinitions> 
 
        <Label Text="Chuva:"
-              Grid.Column="0"
               Grid.Row="0"
-              FontSize="45"/>
+              FontSize="32"/>
 
        <Label x:Name="LabelChuva"
               Text=""
-              Grid.Column="1"
-              Grid.Row="0"/>                    
+              Grid.Row="1"/>                    
        </Grid>         
     </Frame>       
 
@@ -169,15 +166,6 @@
               Text=""
               Grid.Row="1"
               Grid.Column="1"/>
-
-       <Label Text="Direção:"
-              Grid.Row="2"
-              Grid.Column="0"/>
-
-       <Label x:Name="LabelDirecao"
-              Text=""
-              Grid.Row="2"
-              Grid.Column="1"/>                          
 
        </Grid>
     </Frame>       
