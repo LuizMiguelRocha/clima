@@ -14,7 +14,7 @@ public partial class MainPage : ContentPage
 	{
 		InitializeComponent();
 	}
-
+-
 	void PrencHerTela()
 	{
 		LabelClima.Text = resposta.results.climate.ToString();
@@ -33,8 +33,16 @@ public partial class MainPage : ContentPage
 			else if(resposta.results.sunrise >= 10)
 			imagemfundo.Source="amanhecer.png";
 			else if(resposta.results.strength >= 10)
-			imagemfundo.Source=""
-			
+			imagemfundo.Source="vento.png";
+		}
+		if(resposta.results.currently == "noite")
+		{
+			if(resposta.results.rain <= 10)
+			imagemfundo.Source="noite2.png";
+			else if(resposta.results.climate <= 25)
+			imagemfundo.Source="noite1.png";
+			else if(resposta.results.sunrise <= 10)
+			imagemfundo.Source="anoitecer.png";
 		}
 	}
 
